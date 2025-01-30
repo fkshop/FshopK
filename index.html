@@ -52,7 +52,7 @@
     <!-- Страница покупок -->
     <section id="products" class="product-list" style="display: none;">
         <h2>🍔 Продукты 🍕</h2>
-        <div class="products-container">
+        <div class="products-container" id="products-container">
             <div class="product">
                 <img src="Coca-Cola.png" alt="Coca-Cola">
                 <h3>Coca-Cola 0.5L</h3>
@@ -214,20 +214,35 @@
                     <img src="${item.image}" alt="${item.name}">
                     <h3>${item.name}</h3>
                     <p class="price">${item.price}</p>
-                    <button class="remove-from-cart">🗑️ Удалить</button>
+                    <button class="remove-item">Удалить</button>
                 `;
-
                 cartContainer.appendChild(cartItem);
-            });
 
-            // Удаление товара из корзины
-            document.querySelectorAll('.remove-from-cart').forEach((button, index) => {
-                button.addEventListener('click', function() {
-                    cartItems.splice(index, 1); // Удалить товар из массива
-                    updateCart(); // Обновить корзину
+                // Удалить товар из корзины
+                cartItem.querySelector(".remove-item").addEventListener('click', function() {
+                    const index = cartItems.indexOf(item);
+                    if (index > -1) {
+                        cartItems.splice(index, 1);
+                        updateCart();
+                    }
                 });
             });
         }
+
+        // Обработка поиска
+        document.getElementById("search-input").addEventListener("input", function() {
+            const searchTerm = this.value.toLowerCase();
+            const products = document.querySelectorAll(".product");
+
+            products.forEach(product => {
+                const productName = product.querySelector("h3").textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    product.style.display = "block"; // Показываем продукт
+                } else {
+                    product.style.display = "none"; // Скрываем продукт
+                }
+            });
+        });
     </script>
 </body>
 </html>
