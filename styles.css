@@ -1,0 +1,221 @@
+/* Общие стили для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f8f8;
+}
+
+/* Стили для шапки */
+header {
+    background: #ff4d4d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Стили для навигационной панели */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-icons span {
+    font-size: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* Стили для полей ввода */
+input {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* Стили для списка продуктов */
+.product-list {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Стили для контейнера продуктов */
+.products-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Стили для каждого продукта */
+.product {
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 256px;
+    height: 256px;
+    object-fit: contain;
+}
+
+/* Стили для цен */
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.new-price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Стили для кнопок */
+button {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e63e3e;
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+/* Стили для бокового меню */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Меню скрыто за пределами экрана */
+    width: 250px;
+    height: 100%;
+    background-color: #ff4d4d;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+}
+
+.side-menu.active {
+    left: 0; /* Меню появляется при активации */
+}
+
+/* Стили для кнопок в меню */
+.menu-btn {
+    background: none;
+    color: white; /* Белый цвет текста кнопок */
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #e63e3e;
+}
+
+/* Стили для иконки меню (три полоски) */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: #ff4d4d; /* Красный цвет для полосок */
+}
+
+.menu-icon:hover {
+    color: #e63e3e; /* Более темный красный при наведении */
+}
+
+/* Стили для формы регистрации */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Добавляем расстояние между полями */
+    max-width: 400px;
+    margin: 0 auto; /* Центрируем форму */
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Стили для кнопки отправки */
+button {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #e63e3e;
+}
+
+/* Стиль для контейнера с продуктами */
+.product-list {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Стиль для страницы продуктов */
+#products {
+    display: none;
+}
+
+/* Стиль для футера */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
