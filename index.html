@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -210,12 +210,12 @@
                 const cartItem = document.createElement("div");
                 cartItem.classList.add("product");
 
-                cartItem.innerHTML = 
+                cartItem.innerHTML = `
                     <img src="${item.image}" alt="${item.name}">
                     <h3>${item.name}</h3>
                     <p class="price">${item.price}</p>
                     <button class="remove-item">Удалить</button>
-                ;
+                `;
                 cartContainer.appendChild(cartItem);
 
                 // Удалить товар из корзины
